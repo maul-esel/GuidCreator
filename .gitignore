@@ -1,0 +1,5 @@
+/GuidCreator/obj/
+*.xml
+*.pdb
+*.csproj.user
+*.suo

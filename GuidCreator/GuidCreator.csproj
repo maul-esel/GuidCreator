@@ -36,13 +36,14 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\Deploy\Components\</OutputPath>
+    <OutputPath>..\Deploy\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <UseVSHostingProcess>false</UseVSHostingProcess>
-    <DocumentationFile>..\Deploy\GuidCreator.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -61,7 +62,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ChameleonCoder">
-      <HintPath>..\Deploy\ChameleonCoder.exe</HintPath>
+      <HintPath>..\..\ChameleonCoder\Deploy\ChameleonCoder.exe</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Odyssey, Version=1.4.21.36154, Culture=neutral, processorArchitecture=MSIL">
@@ -142,6 +143,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(OutDir)\$(TargetFileName)" "$(SolutionDir)\..\ChameleonCoder\Deploy\Components\$(TargetFileName)"
+copy "$(OutDir)\de-DE\$(TargetName).resources.dll" "$(SolutionDir)\..\ChameleonCoder\Deploy\Components\de-DE\$(TargetFileName).resources.dll"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
