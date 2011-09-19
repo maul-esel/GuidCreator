@@ -62,12 +62,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ChameleonCoder">
-      <HintPath>..\..\ChameleonCoder\Deploy\ChameleonCoder.exe</HintPath>
+      <HintPath>..\..\Deploy\ChameleonCoder.exe</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Odyssey, Version=1.4.21.36154, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Odyssey\Odyssey.dll</HintPath>
+    <Reference Include="Odyssey">
+      <HintPath>..\..\Deploy\Odyssey.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -144,8 +143,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(OutDir)\$(TargetFileName)" "$(SolutionDir)\..\ChameleonCoder\Deploy\Components\$(TargetFileName)"
-copy "$(OutDir)\de-DE\$(TargetName).resources.dll" "$(SolutionDir)\..\ChameleonCoder\Deploy\Components\de-DE\$(TargetFileName).resources.dll"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" "$(SolutionDir)\..\Deploy\Components\$(TargetFileName)"
+copy "$(OutDir)\de-DE\$(TargetName).resources.dll" "$(SolutionDir)\..\Deploy\Components\de-DE\$(TargetName).resources.dll"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
