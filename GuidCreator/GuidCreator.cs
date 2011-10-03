@@ -101,7 +101,7 @@ namespace ChameleonCoder.Services
         /// </summary>
         public void Execute()
         {
-            Properties.Resources.Culture = new System.Globalization.CultureInfo(Interaction.InformationProvider.Language);
+            Properties.Resources.Culture = new System.Globalization.CultureInfo(Shared.InformationProvider.Language);
 
             busy = true;
             CreatorView viewer = new CreatorView();

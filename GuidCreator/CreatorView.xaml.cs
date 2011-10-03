@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows;
-using ChameleonCoder.Interaction;
+using ChameleonCoder.Shared;
 
 namespace ChameleonCoder.Services
 {
