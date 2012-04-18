@@ -65,6 +65,9 @@
       <HintPath>..\..\Deploy\ChameleonCoder.exe</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="ChameleonCoder.Core">
+      <HintPath>..\..\Deploy\ChameleonCoder.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Odyssey">
       <HintPath>..\..\Deploy\Odyssey.dll</HintPath>
       <Private>False</Private>
