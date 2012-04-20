@@ -23,6 +23,7 @@ namespace ChameleonCoder.Services
         /// </summary>
         public void Shutdown()
         {
+            App = null;
         }
 
         /// <summary>
@@ -92,8 +93,18 @@ namespace ChameleonCoder.Services
         /// <summary>
         /// initializes the service
         /// </summary>
-        public void Initialize()
+        public void Initialize(ChameleonCoderApp app)
         {
+            App = app;
+        }
+
+        /// <summary>
+        /// a reference to the app that loaded the service
+        /// </summary>
+        public ChameleonCoderApp App
+        {
+            get;
+            private set;
         }
 
         /// <summary>
