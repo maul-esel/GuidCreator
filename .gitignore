@@ -1,4 +1,5 @@
 /GuidCreator/obj/
+/Deploy/*
 *.xml
 *.pdb
 *.csproj.user
