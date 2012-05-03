@@ -93,7 +93,7 @@ namespace ChameleonCoder.Services
         /// <summary>
         /// initializes the service
         /// </summary>
-        public void Initialize(ChameleonCoderApp app)
+        public void Initialize(IChameleonCoderApp app)
         {
             App = app;
         }
@@ -101,7 +101,7 @@ namespace ChameleonCoder.Services
         /// <summary>
         /// a reference to the app that loaded the service
         /// </summary>
-        public ChameleonCoderApp App
+        public IChameleonCoderApp App
         {
             get;
             private set;
